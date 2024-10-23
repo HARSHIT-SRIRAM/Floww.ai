@@ -15,6 +15,9 @@ app.use(express.json());
 app.use("/users", userRoutes);
 app.use("/txn", transactionRoutes);
 
+app.get("/", async (req, res) => {
+  res.status(200).json({ message: "Welcome to the Floww.ai server!" });
+});
 // intializing server
 const initializingServer = async () => {
   try {

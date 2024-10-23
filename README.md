@@ -61,7 +61,7 @@ Open the app.http File: Navigate to the app.http file in project directory. This
 
 Testing API Endpoints: Each request in the app.http file is preceded by comments that describe its purpose. You can send any request by clicking on the "Send Request" link above each HTTP block. Here’s an overview of the requests included:
 
-### 5. Postman Collection Link
+### 5. Postman Collection Link and Documentation
 
 https://www.postman.com/aerospace-participant-95845269/workspace/floww-ai
 

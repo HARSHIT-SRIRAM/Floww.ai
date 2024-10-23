@@ -1,0 +1,67 @@
+### REGISTER
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+  "username": "Harshit",
+  "email": "harshit@gmail.com",
+  "password": "Harshit@9"
+}
+
+
+### LOGIN
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "username": "Harshit",
+  "password": "Harshit@9"
+}
+
+
+
+
+### Transaction Routes
+
+### Add a new transaction for the authenticated user
+POST http://localhost:3000/txn/transaction
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJIYXJzaGl0IiwiaWF0IjoxNzI5NjMwODM4LCJleHAiOjE3MzIyMjI4Mzh9.YZmkg97GtX8uOXuCyUjCJIBKe1jUim8OW64ErkBHzes
+Content-Type: application/json
+
+{
+  "type": "expense",
+  "category": 1,
+  "amount": 5000,
+  "date": "2024-10-23",
+  "description": "Transportation"
+}
+
+### Retrieve all transactions for the authenticated user
+GET http://localhost:3000/txn/alltransaction?page=2&limit=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJIYXJzaGl0IiwiaWF0IjoxNzI5NjMwODM4LCJleHAiOjE3MzIyMjI4Mzh9.YZmkg97GtX8uOXuCyUjCJIBKe1jUim8OW64ErkBHzes
+
+
+### Retrieve a specific transaction by ID for the authenticated user
+GET http://localhost:3000/txn/transactionbyid/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJIYXJzaGl0IiwiaWF0IjoxNzI5NjMwODM4LCJleHAiOjE3MzIyMjI4Mzh9.YZmkg97GtX8uOXuCyUjCJIBKe1jUim8OW64ErkBHzes
+
+### Update a specific transaction by ID for the authenticated user
+PUT http://localhost:3000/txn/updatetransaction/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJIYXJzaGl0IiwiaWF0IjoxNzI5NjMwODM4LCJleHAiOjE3MzIyMjI4Mzh9.YZmkg97GtX8uOXuCyUjCJIBKe1jUim8OW64ErkBHzes
+Content-Type: application/json
+
+{
+  "type": "expense",
+  "category": 8,
+  "amount": 6000,
+  "date": "2024-10-23",
+  "description": "Transportation"
+}
+
+### Delete a transaction by ID for the authenticated user
+DELETE http://localhost:3000/txn/deletetransaction/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJIYXJzaGl0IiwiaWF0IjoxNzI5NjMwODM4LCJleHAiOjE3MzIyMjI4Mzh9.YZmkg97GtX8uOXuCyUjCJIBKe1jUim8OW64ErkBHzes
+
+### Summary of user transactions
+GET http://localhost:3000/txn/summary?startDate=2024-01-01&endDate=2024-10-23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJIYXJzaGl0IiwiaWF0IjoxNzI5NjMwODM4LCJleHAiOjE3MzIyMjI4Mzh9.YZmkg97GtX8uOXuCyUjCJIBKe1jUim8OW64ErkBHzes

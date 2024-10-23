@@ -48,7 +48,20 @@ To start your server in development mode using nodemon, run the following comman
 nodemon
 ```
 
-### Postman Collection Link
+### 4. Using app.http file [OPTIONAL]
+
+You have two options for testing the API endpoints of the Floww.ai application: using the app.http file or the Postman collection if you want to use postman you can skip **app.http**.
+
+The app.http file contains a collection of HTTP requests that can be used to test the API endpoints of the Floww.ai application. This file provides an easy way to interact with the API without the need for a separate client like Postman.
+
+How to Use the app.http File
+Install an HTTP Client Extension: To use the app.http file effectively, ensure you have an HTTP client extension installed in your code editor. For Visual Studio Code, you can use the REST Client extension.
+
+Open the app.http File: Navigate to the app.http file in project directory. This file contains various HTTP requests organized by functionality.
+
+Testing API Endpoints: Each request in the app.http file is preceded by comments that describe its purpose. You can send any request by clicking on the "Send Request" link above each HTTP block. Here’s an overview of the requests included:
+
+### 5. Postman Collection Link
 
 https://www.postman.com/aerospace-participant-95845269/workspace/floww-ai
 

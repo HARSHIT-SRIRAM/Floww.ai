@@ -12,11 +12,11 @@ const authMiddleware = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, JWT_SECRET); // Verifying token with secret
+    const decoded = jwt.verify(token, JWT_SECRET);
     req.user = decoded;
     next();
   } catch (error) {
-    console.log("Token verification error:", error.message); // Log any verification errors
+    console.log("Token verification error:", error.message); // Logs for any verification errors
     return res
       .status(401)
       .json({ message: "Unauthorized", error: error.message });

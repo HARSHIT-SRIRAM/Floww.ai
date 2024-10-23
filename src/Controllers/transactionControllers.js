@@ -5,7 +5,6 @@ const addingtransaction = async (req, res) => {
   const db = req.app.locals.db;
 
   try {
-    // Check if the category exists
     const categoryQuery = `SELECT id FROM categories WHERE id = ?`;
     const categoryResult = await db.get(categoryQuery, [category]);
 
@@ -13,7 +12,6 @@ const addingtransaction = async (req, res) => {
       return res.status(400).json({ message: "Category does not exist" });
     }
 
-    // If the category exists, insert the transaction
     const query = `
         INSERT INTO transactions (user_id, type, category, amount, date, description) 
         VALUES (?, ?, ?, ?, ?, ?)`;
